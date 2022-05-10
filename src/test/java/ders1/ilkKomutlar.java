@@ -25,6 +25,6 @@ public class ilkKomutlar {
         driver.close();
 
         //calistigimiz tum pencereleri kapatir
-       // driver.quit();
+        driver.quit();
 
     }}
