@@ -11,7 +11,7 @@ public class Title_Url_alma {
 
     static WebDriverManager driver;
     @Test
-    public void driver_Tanimlama() throws InterruptedException {
+    public void titleUrlAlma() throws InterruptedException {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class partialLinktext {
+public class link_Text {
     static WebDriver driver;
 
     @Test
@@ -52,10 +52,8 @@ public class partialLinktext {
             WebElement administration=driver.findElement(By.className("headerLink"));
             WebElement catalog=driver.findElement(By.id("ui-accordion-adminAppMenu-header-0"));
             catalog.click();
-            WebElement catalogA=driver.findElement(By.partialLinkText("Products"));
+            WebElement catalogA=driver.findElement(By.linkText("Categories/Products"));
             catalogA.click();
-
-
         }
     }
 

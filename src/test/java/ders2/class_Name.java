@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class className {
+public class class_Name {
     static WebDriver driver;
 
     @Test
 
-    public void driverTanimlama() {
+    public void className() {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();

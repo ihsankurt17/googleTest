@@ -7,16 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class tagName {
+public class tag_Name {
     static WebDriver driver;
 
     @Test
 
-    public void linkText() throws InterruptedException {
+    public void tagName() throws InterruptedException {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -35,6 +34,6 @@ public class tagName {
             System.out.println("butun tagnames:"+w.getText());
 
         }
-        //System.out.println("h:"+listem.toString());  //=>boyle yapinca sadece referans alabiliyoruz
+        System.out.println("h:"+listem.toString());  //=>boyle yapinca sadece referans alabiliyoruz
 
 }}

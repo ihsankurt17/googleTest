@@ -7,14 +7,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class linkText {
+public class partial_Linktext {
     static WebDriver driver;
 
     @Test
 
-    public void linkText() {
+    public void partialLinktext() {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -30,6 +31,15 @@ public class linkText {
         password.sendKeys("Temp@2020");
         WebElement login=driver.findElement(By.id("tdb1"));
         login.click();
+
+        WebElement yazi=driver.findElement(By.tagName("div"));
+        System.out.println("en bastaki a tagname'e sahip yazi:"+yazi.getText());
+
+        List<WebElement> listem=driver.findElements(By.tagName("div"));
+        for (WebElement w:listem){
+            System.out.println("butun tagnames:"+w.getText());
+
+        }
 
         String pageTitle=driver.getTitle();
         System.out.println(pageTitle);
@@ -50,10 +60,12 @@ public class linkText {
             System.out.println("yanlis sayfadasiniz,tekrar deneyiniz");
 
             WebElement administration=driver.findElement(By.className("headerLink"));
-            WebElement catalog=driver.findElement(By.id("ui-accordion-adminAppMenu-header-0"));
+            WebElement catalog =driver.findElement(By.id("ui-accordion-adminAppMenu-header-0"));
             catalog.click();
-            WebElement catalogA=driver.findElement(By.linkText("Categories/Products"));
+            WebElement catalogA=driver.findElement(By.partialLinkText("Products"));
             catalogA.click();
+
+
         }
     }
 

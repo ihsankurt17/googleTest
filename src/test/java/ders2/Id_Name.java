@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class IdName {
+public class Id_Name {
     static WebDriver driver;
 
     @Test
 
-    public void driverTanimlama() {
+    public void idName() {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -28,6 +28,7 @@ public class IdName {
 
         WebElement password = driver.findElement(By.name("password"));
         password.sendKeys("Temp@2020");
+
         WebElement login=driver.findElement(By.id("tdb1"));
         login.click();
     }

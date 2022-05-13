@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class NavigationKomutlar {
     static WebDriverManager driver;
     @Test
-    public void driver_Tanimlama() throws InterruptedException {
+    public void navigationKomutlar() throws InterruptedException {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();

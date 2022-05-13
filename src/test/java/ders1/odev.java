@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class odev {
     static WebDriverManager driver;
     @Test
-    public void driver_Tanimlama() throws InterruptedException {
+    public void odev() throws InterruptedException {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
