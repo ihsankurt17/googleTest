@@ -36,12 +36,12 @@ public class tekrarOdev_1Ek {
         Thread.sleep(3000);
 
         WebElement search = driver.findElement(By.cssSelector("input[id='search']"));
-        Thread.sleep(6000);
+        Thread.sleep(10000);
         search.click();
         search.sendKeys("imdat" + Keys.ENTER);
         WebElement imdat = driver.findElement(By.xpath("(//*[.='İmdat'])[6]"));
         imdat.click();
-        Thread.sleep(70000);
+        Thread.sleep(30000);
         WebElement youDuvar2 = driver.findElement(By.xpath("//*[.='No, thanks']"));
         youDuvar2.click();
     }
@@ -49,7 +49,7 @@ public class tekrarOdev_1Ek {
     @Test
     public static void test2() throws InterruptedException {
         WebElement clear = driver.findElement(By.cssSelector("input[id='search']"));
-        Thread.sleep(6000);
+        Thread.sleep(10000);
         clear.click();
         clear.clear();
         clear.sendKeys("Kervan" + Keys.ENTER);
@@ -58,6 +58,7 @@ public class tekrarOdev_1Ek {
         Thread.sleep(25000);
         WebElement views = driver.findElement(By.xpath("(//div[@id='count'])[2]"));
         System.out.println("izlenme1:" + views.getText());
+
     }
 
     @Test
@@ -72,6 +73,15 @@ public class tekrarOdev_1Ek {
         Thread.sleep(15000);
         WebElement viewsMakina = driver.findElement(By.xpath("(//div[@id='count'])[2]"));
         System.out.println("izlenme2:" + viewsMakina.getText());
+    }
+    @Test
+    public void test4 () throws InterruptedException {
+        WebElement searchSarki = driver.findElement(By.xpath("//input[@id='search']"));
+        Thread.sleep(5000);
+        searchSarki.click();
+        searchSarki.clear();
+        searchSarki.sendKeys("hallo", Keys.ENTER);
+        Thread.sleep(10000);
     }
     @AfterClass
     public static void afterClass(){
